@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Globe } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, Globe } from 'lucide-react';
 import logo from '../../assets/logo.png';
 
 export function Footer() {
@@ -20,9 +20,6 @@ export function Footer() {
             <div className="flex gap-4">
               <a href="https://www.facebook.com/profile.php?id=61586175400100" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://x.com/makeasite" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Twitter">
-                <Twitter className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/makeasite.in/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />

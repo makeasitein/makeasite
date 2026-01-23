@@ -56,7 +56,7 @@ export function Portfolio() {
     <section id="portfolio" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export function Portfolio() {
         </motion.div>
 
         {/* Portfolio Grid */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -85,7 +85,7 @@ export function Portfolio() {
               rel="noopener noreferrer"
               className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 ring-1 ring-[#1E62FF11] hover:ring-[#00E6FF44]"
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 y: -8,
                 transition: { duration: 0.2 }
               }}
@@ -99,15 +99,16 @@ export function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-center justify-center"
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="bg-white text-slate-800 px-6 py-3 rounded-lg flex items-center gap-2"
                     initial={{ y: 20 }}
                     whileHover={{ y: 0 }}

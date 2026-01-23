@@ -1,27 +1,23 @@
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/HomePage';
 import { Services } from './components/Services';
-import { WhyChooseUs } from './components/WhyChooseUs';
-import { Portfolio } from './components/Portfolio';
 import { Pricing } from './components/Pricing';
-import { Testimonials } from './components/Testimonials';
+import { Portfolio } from './components/Portfolio';
 import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
-import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8F8F8]">
-      <Header />
-      <Hero />
-      <Services />
-      <WhyChooseUs />
-      <Portfolio />
-      <Pricing />
-      <Testimonials />
-      <Contact />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="services" element={<Services />} />
+          <Route path="pricing" element={<Pricing />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

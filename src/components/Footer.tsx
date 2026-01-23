@@ -14,20 +14,20 @@ export function Footer() {
                 MakeA<span className="text-[#00E6FF]">Site</span><span className="text-white/80">.in</span>
               </span>
             </div>
-            <p className="text-white/90 mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Building beautiful, functional websites for small businesses and startups. Simple, fast, and affordable.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all">
+              <a href="https://www.facebook.com/profile.php?id=61586175400100" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all">
+              <a href="https://x.com/makeasite" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all">
+              <a href="https://www.instagram.com/makeasite.in/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all">
+              <a href="https://www.linkedin.com/in/makeasite/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -36,7 +36,7 @@ export function Footer() {
           {/* Services */}
           <div>
             <h3 className="heading-font mb-6">Services</h3>
-            <ul className="space-y-3 text-white/90">
+            <ul className="space-y-3 text-white">
               <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Business Websites</a></li>
               <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Portfolio Websites</a></li>
               <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Landing Pages</a></li>
@@ -49,7 +49,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="heading-font mb-6">Quick Links</h3>
-            <ul className="space-y-3 text-white/90">
+            <ul className="space-y-3 text-white">
               <li><a href="#home" className="hover:text-[#5FD1C8] transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-[#5FD1C8] transition-colors">About Us</a></li>
               <li><a href="#portfolio" className="hover:text-[#5FD1C8] transition-colors">Portfolio</a></li>
@@ -62,7 +62,7 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="heading-font mb-6">Contact Us</h3>
-            <ul className="space-y-4 text-white/90">
+            <ul className="space-y-4 text-white">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <div>

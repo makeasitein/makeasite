@@ -41,7 +41,7 @@ export function WhyChooseUs() {
     <section className="py-20 lg:py-32 bg-gradient-to-br from-[#F8FBFF] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export function WhyChooseUs() {
         </motion.div>
 
         {/* Reasons Grid */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -88,7 +88,7 @@ export function WhyChooseUs() {
         </motion.div>
 
         {/* Stats & Progress */}
-        <motion.div 
+        <motion.div
           className="mt-20 bg-gradient-to-r from-[#1E62FF] to-[#00E6FF] rounded-3xl p-12 text-white"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,17 +99,17 @@ export function WhyChooseUs() {
             <div className="text-center">
               <div style={{ fontSize: '40px', fontWeight: '800' }}>50+</div>
               <div className="text-white/90">Projects Completed</div>
-              <div className="mt-4"><Progress value={90} className="bg-white/20" /></div>
+              <div className="mt-4"><Progress value={90} className="bg-white/20" aria-label="Projects Completed Percentage" /></div>
             </div>
             <div className="text-center">
               <div style={{ fontSize: '40px', fontWeight: '800' }}>100%</div>
               <div className="text-white/90">Client Satisfaction</div>
-              <div className="mt-4"><Progress value={100} className="bg-white/20" /></div>
+              <div className="mt-4"><Progress value={100} className="bg-white/20" aria-label="Client Satisfaction Percentage" /></div>
             </div>
             <div className="text-center">
               <div style={{ fontSize: '40px', fontWeight: '800' }}>24×7</div>
               <div className="text-white/90">Support Available</div>
-              <div className="mt-4"><Progress value={100} className="bg-white/20" /></div>
+              <div className="mt-4"><Progress value={100} className="bg-white/20" aria-label="Support Availability" /></div>
             </div>
           </div>
         </motion.div>

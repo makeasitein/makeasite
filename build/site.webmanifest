@@ -1,0 +1,22 @@
+{
+    "name": "MakeASite.in - Create Website for Business in Kerala",
+    "short_name": "MakeASite",
+    "description": "Create website for business in Kerala. Professional web development services.",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1E62FF",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}

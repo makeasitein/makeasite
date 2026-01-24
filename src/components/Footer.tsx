@@ -15,7 +15,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-white mb-6 leading-relaxed">
-              Building beautiful, functional websites for small businesses and startups. Simple, fast, and affordable.
+              Create website for business in Kerala. Professional web development services for startups, SMEs, and enterprises across Kerala.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/profile.php?id=61586175400100" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#00E6FF22] rounded-lg flex items-center justify-center transition-all" aria-label="Facebook">
@@ -82,7 +82,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/80 text-sm">
           <div>
-            © 2024 MakeASite.in. All rights reserved.
+            © 2026 MakeASite.in. All rights reserved.
           </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#00E6FF] transition-colors">Privacy Policy</a>

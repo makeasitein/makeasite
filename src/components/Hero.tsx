@@ -59,7 +59,7 @@ export function Hero() {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <Sparkles className="w-4 h-4 text-[#00E6FF]" />
-              <span className="text-slate-700 text-sm">Digital Solutions for Kerala Businesses</span>
+              <span className="text-slate-700 text-sm">Create Websites for Businesses in Kerala</span>
             </motion.div>
 
             <motion.h1
@@ -69,7 +69,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Build Your Business Website in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E62FF] to-[#00E6FF]">Kerala</span> with Digital Innovation
+              Create Website for Your Business in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1E62FF] to-[#00E6FF]">Kerala</span> Today
             </motion.h1>
 
             <motion.p
@@ -78,7 +78,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Your partner for Web Development, AI Solutions, and Digital Marketing in Kerala. Specializing in growth strategies for the Kerala commercial sector.
+              Professional website design and development services for businesses in Kerala. We create SEO-optimized, mobile-friendly websites that help your business grow online. Serving startups, SMEs, and enterprises across Kerala.
             </motion.p>
 
             <motion.div

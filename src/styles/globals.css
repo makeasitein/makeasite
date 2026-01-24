@@ -10,13 +10,16 @@
   --card-foreground: #0E0E0E;
   --popover: #ffffff;
   --popover-foreground: #0E0E0E;
-  --primary: #1E62FF; /* Royal Blue */
+  --primary: #1E62FF;
+  /* Royal Blue */
   --primary-foreground: #ffffff;
-  --secondary: #0E0E0E; /* Black */
+  --secondary: #0E0E0E;
+  /* Black */
   --secondary-foreground: #ffffff;
   --muted: #F3F6FB;
   --muted-foreground: #5E6B7A;
-  --accent: #00E6FF; /* Neon Cyan */
+  --accent: #00E6FF;
+  /* Neon Cyan */
   --accent-foreground: #0E0E0E;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
@@ -198,26 +201,38 @@ html {
   font-family: "Playfair Display", serif;
   font-weight: 800;
 }
+
 .display-font {
   font-family: "Playfair Display", serif;
   font-weight: 800;
   letter-spacing: 0.25px;
 }
+
 .body-font {
   font-family: "Fira Sans", system-ui, sans-serif;
 }
 
 /* Enforce Playfair Display on all headings site-wide */
 @layer base {
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: "Playfair Display", serif;
   }
+}
+
+header {
+  border-radius: 15px;
+  margin: 10px;
 }
 
 /* Futuristic neon effects */
 .neon-hover {
   transition: box-shadow 240ms ease, transform 240ms ease;
 }
+
 .neon-hover:hover {
   box-shadow: 0 0 0 2px var(--accent), 0 0 24px var(--accent);
   transform: translateY(-2px);
@@ -226,18 +241,24 @@ html {
 /* Reusable card styles */
 .card {
   background-color: #ffffff;
-  border-radius: 1rem; /* rounded-2xl */
+  border-radius: 1rem;
+  /* rounded-2xl */
   box-shadow: 0 10px 24px rgba(16, 24, 40, 0.06);
-  border: 1px solid rgba(30, 98, 255, 0.07); /* ring-[#1E62FF11] approximation */
+  border: 1px solid rgba(30, 98, 255, 0.07);
+  /* ring-[#1E62FF11] approximation */
 }
+
 .card-hover {
   transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
 }
+
 .card-hover:hover {
   box-shadow: 0 18px 36px rgba(16, 24, 40, 0.12);
   transform: translateY(-2px);
-  border-color: rgba(0, 230, 255, 0.26); /* hover:ring-[#00E6FF44] approximation */
+  border-color: rgba(0, 230, 255, 0.26);
+  /* hover:ring-[#00E6FF44] approximation */
 }
+
 .card-dark {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -245,81 +266,131 @@ html {
 
 /* Floating shapes animations */
 @keyframes floaty {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-12px) rotate(6deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(6deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
+
 @keyframes spin-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 @keyframes pulse-neon {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 230, 255, 0.5); }
-  50% { box-shadow: 0 0 0 12px rgba(0, 230, 255, 0); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 230, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(0, 230, 255, 0);
+  }
 }
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes fade-in-down {
   0% {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes scale-in {
   0% {
     opacity: 0;
     transform: scale(0.8);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 @keyframes slide-in-left {
   0% {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 @keyframes slide-in-right {
   0% {
     opacity: 0;
     transform: translateX(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
+
 @keyframes bounce-subtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
 @keyframes rotate-3d {
-  0% { transform: perspective(1000px) rotateY(0deg); }
-  100% { transform: perspective(1000px) rotateY(360deg); }
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
+
 @keyframes glow-pulse {
-  0%, 100% { 
+
+  0%,
+  100% {
     filter: drop-shadow(0 0 8px rgba(30, 98, 255, 0.4));
   }
-  50% { 
+
+  50% {
     filter: drop-shadow(0 0 20px rgba(0, 230, 255, 0.6));
   }
 }
@@ -328,6 +399,7 @@ html {
   position: absolute;
   filter: drop-shadow(0 12px 24px rgba(30, 98, 255, 0.2));
 }
+
 .shape.orb-3d {
   border-radius: 9999px;
   background: radial-gradient(35% 35% at 30% 30%, #ffffff88, #00E6FF 20%, #1E62FF 80%);
@@ -337,6 +409,7 @@ html {
     0 30px 50px rgba(30, 98, 255, 0.25);
   animation: floaty 7s ease-in-out infinite;
 }
+
 .shape.cube-3d {
   border-radius: 22px;
   background: linear-gradient(145deg, #1E62FF 0%, #00E6FF 60%, #6beaff 100%);
@@ -347,6 +420,7 @@ html {
   transform: perspective(600px) rotateX(6deg) rotateY(-8deg);
   animation: floaty 9s ease-in-out infinite;
 }
+
 .shape.ring-3d {
   border: 3px solid #00E6FF;
   border-radius: 9999px;
@@ -359,24 +433,31 @@ html {
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out;
 }
+
 .animate-fade-in-down {
   animation: fade-in-down 0.6s ease-out;
 }
+
 .animate-scale-in {
   animation: scale-in 0.5s ease-out;
 }
+
 .animate-slide-in-left {
   animation: slide-in-left 0.7s ease-out;
 }
+
 .animate-slide-in-right {
   animation: slide-in-right 0.7s ease-out;
 }
+
 .animate-bounce-subtle {
   animation: bounce-subtle 2s ease-in-out infinite;
 }
+
 .animate-rotate-3d {
   animation: rotate-3d 20s linear infinite;
 }
+
 .animate-glow-pulse {
   animation: glow-pulse 3s ease-in-out infinite;
 }
@@ -386,9 +467,11 @@ html {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
+
 .card-3d {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .card-3d:hover {
   transform: perspective(1000px) rotateY(5deg) translateY(-8px);
   box-shadow: 0 20px 40px rgba(30, 98, 255, 0.2);
@@ -419,6 +502,7 @@ html {
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -432,6 +516,7 @@ html {
 
 /* Reduced motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -440,4 +525,3 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
-

@@ -76,21 +76,21 @@ export function Services() {
     <section id="services" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="heading-font text-slate-900 mb-4">Our Services</h2>
+          <h2 className="heading-font text-slate-900 mb-4">Create Professional Websites for Your Business</h2>
           <p className="text-slate-600 text-lg">
-            Tailored digital solutions for businesses in Kerala, focusing on Kerala, Ernakulam, Kochi, and Kakkanad.
+            Comprehensive web development and digital services for businesses across Kerala - from Kochi to Ernakulam, Kakkanad, and beyond.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -102,23 +102,23 @@ export function Services() {
               key={index}
               className="neon-hover bg-[#F8FBFF] rounded-2xl p-8 hover:-translate-y-1 group border border-slate-100"
               variants={itemVariants}
-              whileHover={{ 
+              whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
             >
-              <motion.div 
+              <motion.div
                 className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-white shadow-lg"
                 style={{ background: `linear-gradient(135deg, ${service.color}, ${service.color}dd)` }}
                 whileHover={{ rotate: 5, scale: 1.1 }}
               >
                 <service.icon className="w-7 h-7" />
               </motion.div>
-              
+
               <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#1E62FF] transition-colors">
                 {service.title}
               </h3>
-              
+
               <p className="text-slate-600 mb-6 leading-relaxed">
                 {service.description}
               </p>

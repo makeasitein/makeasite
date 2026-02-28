@@ -50,7 +50,7 @@ export function Footer() {
             <h3 className="heading-font mb-6">Our Products</h3>
             <ul className="space-y-3 text-white">
               <li>
-                <span className="text-white/90 font-medium">WappBroadcaster</span>
+                <span className="text-white/90 font-medium">WhatsappBroadcaster</span>
                 <p className="text-white/60 text-xs mt-0.5">WhatsApp Broadcasting Platform</p>
               </li>
               <li>
@@ -115,7 +115,6 @@ export function Footer() {
           <div className="flex flex-wrap justify-center gap-6">
             <Link to="/privacy" className="hover:text-[#00E6FF] transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-[#00E6FF] transition-colors">Terms of Service</Link>
-            <Link to="/refund" className="hover:text-[#00E6FF] transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

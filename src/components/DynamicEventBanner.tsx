@@ -12,11 +12,11 @@ interface BannerConfig {
     backgroundColor?: string;
     textColor?: string;
     height?: string;
+    mobileHeight?: string;
     content?: string;
 }
 
 // Default to local file, but can be changed to a raw GitHub URL
-// e.g., "https://raw.githubusercontent.com/makeasitein/makeasite/main/public/events/banner-config.json"
 const CONFIG_URL = "/events/banner-config.json";
 
 export function DynamicEventBanner() {
@@ -79,22 +79,69 @@ export function DynamicEventBanner() {
 }
 
 function BannerContent({ config, onClose }: { config: BannerConfig; onClose: (e: React.MouseEvent) => void }) {
+    // If image is present, show full width image with responsive height
+    if (config.imageUrl) {
+        const desktopHeight = config.height || '80px';
+        const mobileHeight = config.mobileHeight || desktopHeight;
+
+        return (
+            <div
+                className="relative w-full"
+                style={{
+                    // @ts-ignore - Custom CSS variables
+                    '--banner-h-desk': desktopHeight,
+                    '--banner-h-mob': mobileHeight,
+                }}
+            >
+                <style>{`
+                    .banner-responsive-height {
+                        height: var(--banner-h-mob);
+                    }
+                    @media (min-width: 768px) {
+                        .banner-responsive-height {
+                            height: var(--banner-h-desk);
+                        }
+                    }
+                `}</style>
+
+
+                <picture className="block w-full banner-responsive-height">
+                    {/* Mobile Image */}
+                    {config.mobileImageUrl && (
+                        <source media="(max-width: 768px)" srcSet={config.mobileImageUrl} />
+                    )}
+                    {/* Desktop Image (default) */}
+                    <img
+                        src={config.imageUrl}
+                        alt={config.altText || "Event"}
+                        className="w-full h-full object-cover block"
+                    />
+                </picture>
+
+                <button
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onClose(e);
+                    }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-black/20 hover:bg-black/40 transition-colors backdrop-blur-sm z-10"
+                    aria-label="Close banner"
+                >
+                    <X className="w-5 h-5 text-white drop-shadow-sm" />
+                </button>
+            </div>
+        );
+    }
+
+    // Text-only fallback
     return (
         <div className="relative flex items-center justify-center min-h-[40px] px-8 py-2 text-center">
-            {config.imageUrl ? (
-                <img
-                    src={config.imageUrl}
-                    alt={config.altText || "Event"}
-                    className="max-h-[60px] w-auto object-contain"
-                />
-            ) : (
-                <p
-                    className="text-sm md:text-base font-medium"
-                    style={{ color: config.textColor || '#ffffff' }}
-                >
-                    {config.content}
-                </p>
-            )}
+            <p
+                className="text-sm md:text-base font-medium"
+                style={{ color: config.textColor || '#ffffff' }}
+            >
+                {config.content}
+            </p>
 
             <button
                 onClick={(e) => {

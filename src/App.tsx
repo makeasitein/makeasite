@@ -5,6 +5,8 @@ import { Services } from './components/Services';
 import { Pricing } from './components/Pricing';
 import { Portfolio } from './components/Portfolio';
 import { Contact } from './components/Contact';
+import { Terms } from './pages/Terms';
+import { Privacy } from './pages/Privacy';
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="privacy" element={<Privacy />} />
         </Route>
       </Routes>
     </BrowserRouter>

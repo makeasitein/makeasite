@@ -1,13 +1,15 @@
 import { Facebook, Instagram, Linkedin, Mail, Phone, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
 export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#8098b7] to-[#1E62FF] text-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+
           {/* Brand */}
-          <div>
+          <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <img src={logo} alt="MakeASite.in" className="w-10 h-10 rounded-lg" />
               <span className="heading-font" style={{ fontSize: '22px' }}>
@@ -34,12 +36,34 @@ export function Footer() {
           <div>
             <h3 className="heading-font mb-6">Services</h3>
             <ul className="space-y-3 text-white">
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Business Websites</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Portfolio Websites</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Landing Pages</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">E-commerce Basics</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Digital Growth Support</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Branding Kit</a></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Business Websites</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Portfolio Websites</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Landing Pages</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">E-commerce Basics</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Digital Growth Support</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Branding Kit</Link></li>
+            </ul>
+          </div>
+
+          {/* Our Products */}
+          <div>
+            <h3 className="heading-font mb-6">Our Products</h3>
+            <ul className="space-y-3 text-white">
+              <li>
+                <span className="text-white/90 font-medium">WappBroadcaster</span>
+                <p className="text-white/60 text-xs mt-0.5">WhatsApp Broadcasting Platform</p>
+              </li>
+              <li>
+                <a
+                  href="https://buildwealth24.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#5FD1C8] transition-colors font-medium"
+                >
+                  BuildWealth24.in
+                </a>
+                <p className="text-white/60 text-xs mt-0.5">Financial Growth Platform</p>
+              </li>
             </ul>
           </div>
 
@@ -47,12 +71,11 @@ export function Footer() {
           <div>
             <h3 className="heading-font mb-6">Quick Links</h3>
             <ul className="space-y-3 text-white">
-              <li><a href="#home" className="hover:text-[#5FD1C8] transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-[#5FD1C8] transition-colors">About Us</a></li>
-              <li><a href="#portfolio" className="hover:text-[#5FD1C8] transition-colors">Portfolio</a></li>
-              <li><a href="#pricing" className="hover:text-[#5FD1C8] transition-colors">Pricing</a></li>
-              <li><a href="#contact" className="hover:text-[#5FD1C8] transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-[#5FD1C8] transition-colors">Blog</a></li>
+              <li><Link to="/" className="hover:text-[#5FD1C8] transition-colors">Home</Link></li>
+              <li><Link to="/services" className="hover:text-[#5FD1C8] transition-colors">Services</Link></li>
+              <li><Link to="/portfolio" className="hover:text-[#5FD1C8] transition-colors">Portfolio</Link></li>
+              <li><Link to="/pricing" className="hover:text-[#5FD1C8] transition-colors">Pricing</Link></li>
+              <li><Link to="/contact" className="hover:text-[#5FD1C8] transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -69,14 +92,19 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <div>makeasite.in@gmail.com</div>
+                <a href="mailto:makeasite.in@gmail.com" className="hover:text-[#5FD1C8] transition-colors break-all">
+                  makeasite.in@gmail.com
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Globe className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <div>MakeASite.in</div>
+                <a href="https://makeasite.in" target="_blank" rel="noopener noreferrer" className="hover:text-[#5FD1C8] transition-colors">
+                  makeasite.in
+                </a>
               </li>
             </ul>
           </div>
+
         </div>
 
         {/* Bottom Bar */}
@@ -84,10 +112,10 @@ export function Footer() {
           <div>
             © 2026 MakeASite.in. All rights reserved.
           </div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-[#00E6FF] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#00E6FF] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#00E6FF] transition-colors">Cookie Policy</a>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link to="/privacy" className="hover:text-[#00E6FF] transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[#00E6FF] transition-colors">Terms of Service</Link>
+            <Link to="/refund" className="hover:text-[#00E6FF] transition-colors">Refund Policy</Link>
           </div>
         </div>
       </div>

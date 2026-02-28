@@ -1,0 +1,11 @@
+{
+    "enabled": true,
+    "id": "republic-day-2026",
+    "imageUrl": "https://static.mygov.in/static/s3fs-public/mygov_176354276150183151.webp",
+    "link": "/contact",
+    "altText": "Happy Republic Day from MakeASite.in",
+    "backgroundColor": "#FF9933",
+    "textColor": "#ffffff",
+    "height": "150px",
+    "content": "Jai Hind! Happy Republic Day to all our customers."
+}
